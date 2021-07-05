@@ -1,5 +1,7 @@
 <?php
 
+use Modules\Blog\Http\Controllers\BlogController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,7 @@
 */
 
 Route::prefix('blog')->group(function() {
-    Route::get('/','BlogController@index');
+    //Route::get('/','BlogController@index');
+   
+    Route::get('/',[BlogController::class,'index']);
 });
